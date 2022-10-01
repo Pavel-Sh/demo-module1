@@ -7,9 +7,9 @@ node {
                 aws configure set aws_secret_access_key ${PASSWORD}
                 aws configure set default.region us-west-2
                 export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain test --domain-owner 748392735374 --region us-west-2 --query authorizationToken --output text`
-                chmod +x gradlew
-                ./gradlew publish
             '''
+            sh "chmod +x ./gradlew"
+            sh "./gradlew publish"
         }
     }
 
