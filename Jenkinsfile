@@ -1,4 +1,6 @@
-node {
+pipeline {
+
+    agent any
 
     stage('publish artifact') {
         withCredentials([usernamePassword(credentialsId: 'aws', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
