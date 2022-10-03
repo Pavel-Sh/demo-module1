@@ -18,6 +18,8 @@ dependencies {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
+
+			version = '0.0.2'
 			from components.java
 		}
 	}
